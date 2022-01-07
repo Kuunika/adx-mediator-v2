@@ -7,7 +7,7 @@ NestJS port of Aggregate Data Exchange Mediator
 ## Config
 
 1. copy .env.sample to .env
-2. Update relevant keys in .env file
+2. update relevant keys in .env file
 
 ## Installation
 
