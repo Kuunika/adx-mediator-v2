@@ -1,51 +1,44 @@
 import { ConfigService } from '@nestjs/config';
-import { NestFactory } from '@nestjs/core';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { readFile } from 'fs/promises';
-import {
-  MEDIATOR_API_DESCRIPTION,
-  MEDIATOR_API_TAG,
-  MEDIATOR_NAME,
-  MEDIATOR_API_PORT,
-  MEDIATOR_API_VERSION,
-} from './common/constants';
+import { AllExceptionsFilter } from './common/filters/all-exceptions-filter.filter';
+import { RequestResponseInterceptor } from './common/interceptors/request-response.interceptor';
+import { registerMediatorToOpenHim } from './lib/openhim';
+import { LoggingService } from './logging/logging.service';
+import { MediatorConfigBuilder } from './open-him/mediator-config-builder';
+import { OpenHimService } from './open-him/open-him.service';
+import { urlencoded, json } from 'express';
 
 async function bootstrap() {
-  const app = await createAppEnvironment();
+  const app = await NestFactory.create(AppModule);
+  app.use(json({ limit: '50mb' }));
+  app.use(urlencoded({ extended: true, limit: '50mb' }));
+
   const configService = app.get<ConfigService>(ConfigService);
+  const log = app.get<LoggingService>(LoggingService);
+  const openHieService = app.get<OpenHimService>(OpenHimService);
+  app.useGlobalInterceptors(
+    new RequestResponseInterceptor(log, openHieService),
+  );
+  const httpAdapterHost = app.get<HttpAdapterHost>(HttpAdapterHost);
 
-  app.enableCors();
+  app.useGlobalFilters(new AllExceptionsFilter(httpAdapterHost, log));
+  const PORT = configService.get<number>('PORT');
+  const ENVIRONMENT = configService.get<string>('NODE_ENV');
+  const PREFIX = configService.get<string>('URL_PREFIX');
 
-  const apiPort = configService.get<number>(MEDIATOR_API_PORT) || 3000;
-  const apiVersion = configService.get<string>(MEDIATOR_API_VERSION) || 'v1';
-  app.setGlobalPrefix(`api/${apiVersion}`);
-
-  const config = new DocumentBuilder()
-    .setTitle(MEDIATOR_NAME)
-    .setDescription(MEDIATOR_API_DESCRIPTION)
-    .setVersion(apiVersion)
-    .addTag(MEDIATOR_API_TAG)
-    .build();
-  const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup(`api/${apiVersion}/docs`, app, document);
-
-  await app.listen(apiPort);
-}
-
-async function createAppEnvironment() {
-  if (process.env.NODE_ENV === 'PRODUCTION') {
-    const keyFile = await readFile(process.env.KEY_LOCATION);
-    const certFile = await readFile(process.env.CRT_LOCATION);
-
-    return NestFactory.create(AppModule, {
-      httpsOptions: {
-        key: keyFile,
-        cert: certFile,
-      },
-    });
+  app.setGlobalPrefix(PREFIX);
+  await app.listen(PORT);
+  //TODO: When service is unable to connect to the OpenHIM, Crash anc log to console.
+  log.info('Application Started', { started: 'initial' });
+  if (ENVIRONMENT === 'OPENHIM') {
+    const mediatorConfigBuilder = new MediatorConfigBuilder();
+    registerMediatorToOpenHim(
+      mediatorConfigBuilder.build(),
+      openHieService,
+      log,
+    );
   }
-  return NestFactory.create(AppModule);
 }
 
 bootstrap();

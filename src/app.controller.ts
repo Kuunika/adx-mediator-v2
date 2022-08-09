@@ -1,14 +1,26 @@
-import { Controller, Get, UseInterceptors } from '@nestjs/common';
-import { AppService } from './app.service';
-import { LoggerInterceptor } from './logger/logger.interceptor';
+import { Body, Controller, Post, Headers } from '@nestjs/common';
+import { Dhis2Service } from './dhis2/dhis2.service';
+import { CreateDataElementsDto } from './dhis2/dto';
 
-@UseInterceptors(LoggerInterceptor)
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly dhis2Service: Dhis2Service) {}
 
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  @Post('data-elements')
+  async create(
+    @Body() createDataElementsDto: CreateDataElementsDto,
+    @Headers() headers,
+  ) {
+    const clientId = headers['x-openhim-clientid'];
+    const transactionId = headers['x-openhim-transactionid'];
+    const result = await this.dhis2Service.create(createDataElementsDto, {
+      clientId,
+      transactionId,
+    });
+    return {
+      message: 'Payload received successfully',
+      transactionId,
+      notificationsChannel: result,
+    };
   }
 }
