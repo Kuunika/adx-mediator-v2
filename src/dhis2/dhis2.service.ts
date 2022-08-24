@@ -1,17 +1,12 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { CreateDataElementsDto } from './dto';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
-import { ConfigService } from '@nestjs/config';
-import { ClientProxy } from '@nestjs/microservices';
 import { LoggingService } from 'src/logging/logging.service';
 
 @Injectable()
 export class Dhis2Service {
-  constructor(
-    private readonly log: LoggingService,
-    @Inject('ADX_LOGISTICS') private readonly client: ClientProxy,
-  ) {}
+  constructor(private readonly log: LoggingService) {}
 
   async create(
     createDataElementsDto: CreateDataElementsDto,
@@ -30,12 +25,12 @@ export class Dhis2Service {
       flag: 'w',
     });
 
-    this.client.emit<any>('migration', {
-      dataElementsFile,
-      client: metaData.clientId,
-      transactionId: metaData.transactionId,
-      timestamp: new Date().toISOString(),
-    });
+    // this.client.emit<any>('migration', {
+    //   dataElementsFile,
+    //   client: metaData.clientId,
+    //   transactionId: metaData.transactionId,
+    //   timestamp: new Date().toISOString(),
+    // });
 
     this.log.info(
       `Payload for transaction: ${transactionId} from client${clientId}`,
