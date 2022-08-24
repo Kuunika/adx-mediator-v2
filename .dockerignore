@@ -5,4 +5,11 @@ adx_logistics
 node_modules
 .env
 .env.sample
-docker-compose
+.DS_Store
+README.md
+CHANGELOG.md
+docker-compose.yml
+Dockerfile
+.git
+.gitattributes
+.gitignore
