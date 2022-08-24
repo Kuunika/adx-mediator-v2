@@ -1,0 +1,17 @@
+version: '3'
+networks:
+  openhim-v-7_openhim:
+    external: true
+services:
+  backend:
+    restart: always
+    container_name: adx_mediator
+    networks:
+      - openhim-v-7_openhim
+    build: .
+    ports:
+      - "9080:9080"
+    env_file:
+      - .env
+    volumes:
+      - /home/dev_team/data-files/adx_logistics:/usr/src/app/adx_logistics

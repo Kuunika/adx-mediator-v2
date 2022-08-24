@@ -12,7 +12,7 @@ export class LoggingService {
     const name = process.env.npm_package_name;
     let format;
     const env = process.env.NODE_ENV;
-    if (['STAND_ALONE', 'OPENHIM'].includes(env)) {
+    if (['DETACHED', 'OPENHIM'].includes(env)) {
       format = this.productionTransport();
     } else {
       format = this.developmentTransport();
