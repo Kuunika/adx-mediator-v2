@@ -3,6 +3,7 @@
         "clientid",
         "dhis",
         "HIMS",
+        "nestjs",
         "openhim",
         "RABBITMQ",
         "transactionid"
