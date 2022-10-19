@@ -11,6 +11,7 @@ import { urlencoded, json } from 'express';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  //TODO: have the limit read from a env or OpenHIM configuration
   app.use(json({ limit: '500mb' }));
   app.use(urlencoded({ extended: true, limit: '500mb' }));
 
@@ -28,6 +29,7 @@ async function bootstrap() {
   const PREFIX = configService.get<string>('URL_PREFIX');
 
   app.setGlobalPrefix(PREFIX);
+
   await app.listen(PORT);
   //TODO: When service is unable to connect to the OpenHIM, Crash anc log to console.
   log.info('Application Started', { started: 'initial' });

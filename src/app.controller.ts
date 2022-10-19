@@ -8,9 +8,11 @@ export class AppController {
 
   @Post('data-elements')
   async create(
+    //TODO: create a validation pipe for the incoming data
     @Body() createDataElementsDto: CreateDataElementsDto,
     @Headers() headers,
   ) {
+    //TODO: there will need to be validation on the client and transaction ids
     const clientId = headers['x-openhim-clientid'];
     const transactionId = headers['x-openhim-transactionid'];
     const result = await this.dhis2Service.create(createDataElementsDto, {
