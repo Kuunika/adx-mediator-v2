@@ -8,20 +8,22 @@ import { Observable, tap } from 'rxjs';
 import { LoggingService } from '../../logging/logging.service';
 import { Request, Response } from 'express';
 import { OpenHimService } from 'src/open-him/open-him.service';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class RequestResponseInterceptor implements NestInterceptor {
   constructor(
     private readonly logger: LoggingService,
     private readonly openHim: OpenHimService,
+    private readonly config: ConfigService,
   ) {}
 
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const request = context.switchToHttp().getRequest<Request>();
     const { method, url } = request;
     let ip;
-
-    if (process.env.NODE_ENV === 'OPENHIM') {
+    const DEPLOYMENT = this.config.getOrThrow<string>('DEPLOYMENT');
+    if (DEPLOYMENT === 'OPENHIM') {
       //NOTE: Assumption here is the OpenHIM is sitting behind NGINX, otherwise the we can know know the IP Address where the request came from.
       ip = request.headers['x-real-ip'] as string;
       if (ip === undefined) {

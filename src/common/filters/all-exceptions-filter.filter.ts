@@ -6,6 +6,7 @@ import {
   HttpException,
   HttpStatus,
 } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { Request } from 'express';
 import { LoggingService } from '../../logging/logging.service';
 
@@ -14,6 +15,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
   constructor(
     private readonly httpAdapterHost: HttpAdapterHost,
     private readonly log: LoggingService,
+    private readonly config: ConfigService,
   ) {}
 
   catch(error: unknown, host: ArgumentsHost): void {
@@ -25,7 +27,8 @@ export class AllExceptionsFilter implements ExceptionFilter {
 
     let httpStatus;
     let ip;
-    if (process.env.NODE_ENV === 'OPENHIM') {
+    const DEPLOYMENT = this.config.getOrThrow<string>('DEPLOYMENT');
+    if (DEPLOYMENT === 'OPENHIM') {
       //NOTE: Assumption here is the OpenHIM is sitting behind NGINX, otherwise the we can know know the IP Address where the request came from.
       ip = ctx.getRequest<Request>().headers['x-real-ip'] as string;
       if (ip === undefined) {

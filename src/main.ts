@@ -19,13 +19,15 @@ async function bootstrap() {
   const log = app.get<LoggingService>(LoggingService);
   const openHieService = app.get<OpenHimService>(OpenHimService);
   app.useGlobalInterceptors(
-    new RequestResponseInterceptor(log, openHieService),
+    new RequestResponseInterceptor(log, openHieService, configService),
   );
   const httpAdapterHost = app.get<HttpAdapterHost>(HttpAdapterHost);
 
-  app.useGlobalFilters(new AllExceptionsFilter(httpAdapterHost, log));
+  app.useGlobalFilters(
+    new AllExceptionsFilter(httpAdapterHost, log, configService),
+  );
   const PORT = configService.get<number>('PORT');
-  const ENVIRONMENT = configService.get<string>('NODE_ENV');
+  const DEPLOYMENT = configService.get<string>('DEPLOYMENT');
   const PREFIX = configService.get<string>('URL_PREFIX');
 
   app.setGlobalPrefix(PREFIX);
@@ -33,7 +35,7 @@ async function bootstrap() {
   await app.listen(PORT);
   //TODO: When service is unable to connect to the OpenHIM, Crash anc log to console.
   log.info('Application Started', { started: 'initial' });
-  if (ENVIRONMENT === 'OPENHIM') {
+  if (DEPLOYMENT === 'OPENHIM') {
     const mediatorConfigBuilder = new MediatorConfigBuilder();
     registerMediatorToOpenHim(
       mediatorConfigBuilder.build(),
