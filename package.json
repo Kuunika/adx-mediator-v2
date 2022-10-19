@@ -2,9 +2,9 @@
   "name": "adx-mediator-v2",
   "version": "1.0.0",
   "description": "NestJS port of Aggregated Data Exchange mediator.",
-  "author": "Digital Health Division, Daniel Mwakanema",
+  "author": "Digital Health Division, Daniel Mwakanema, Brett Onions",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
