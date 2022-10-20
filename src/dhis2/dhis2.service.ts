@@ -43,7 +43,7 @@ export class Dhis2Service {
       timestamp: new Date().toISOString(),
     });
 
-    if (clientId === 'OpenLMIS') {
+    if (clientId === 'openlmis') {
       this.gfpvan_client.emit<any>('gfpvan', {
         dataElementsFile,
         client: metaData.clientId,
