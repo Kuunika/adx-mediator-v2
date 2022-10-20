@@ -6,7 +6,7 @@ import { CreateDataElementsDto } from './dhis2/dto';
 export class AppController {
   constructor(private readonly dhis2Service: Dhis2Service) {}
 
-  @Post('data-elements')
+  @Post()
   async create(
     //TODO: create a validation pipe for the incoming data
     @Body() createDataElementsDto: CreateDataElementsDto,
