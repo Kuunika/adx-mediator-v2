@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { CreateDataElementsDto } from './dto';
-import { writeFile } from 'fs/promises';
+import { writeFile, mkdir, rename } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import { join } from 'path';
 import { LoggingService } from 'src/logging/logging.service';
 import { ClientProxy } from '@nestjs/microservices';
@@ -19,12 +20,72 @@ export class Dhis2Service {
     metaData: { clientId: string; transactionId: string },
   ) {
     const { clientId, transactionId } = metaData;
+    const reportingPeriod = createDataElementsDto['reporting-period'];
     //TODO: this should read the path from an env
+
+    if (
+      !existsSync(
+        join(
+          process.cwd(),
+          'adx_logistics',
+          'data_files',
+          clientId,
+          reportingPeriod,
+        ),
+      )
+    ) {
+      await mkdir(
+        join(
+          process.cwd(),
+          'adx_logistics',
+          'data_files',
+          clientId,
+          reportingPeriod,
+        ),
+      );
+      await mkdir(
+        join(
+          process.cwd(),
+          'adx_logistics',
+          'data_files',
+          clientId,
+          reportingPeriod,
+          'archive',
+        ),
+      );
+    }
+
+    const reportingFile = join(
+      process.cwd(),
+      'adx_logistics',
+      'data_files',
+      clientId,
+      reportingPeriod,
+      `${reportingPeriod}.json`,
+    );
+
+    if (existsSync(reportingFile)) {
+      await rename(
+        reportingFile,
+        join(
+          process.cwd(),
+          'adx_logistics',
+          'data_files',
+          clientId,
+          reportingPeriod,
+          'archive',
+          `${reportingPeriod}.${Math.floor(Date.now() / 1000)}.json`,
+        ),
+      );
+    }
+
     const dataElementsFile = join(
       process.cwd(),
       'adx_logistics',
       'data_files',
-      `${transactionId}.adx.json`,
+      clientId,
+      reportingPeriod,
+      `${reportingPeriod}.json`,
     );
     await writeFile(dataElementsFile, JSON.stringify(createDataElementsDto), {
       encoding: 'utf8',

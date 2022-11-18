@@ -1,11 +1,15 @@
-export class CreateDataElementsDto {
+export interface CreateDataElementsDto {
   description: string;
-  values: Array<DataElementValue>;
+  facilities: Array<Facility>;
+  'reporting-period': string;
 }
 
-export interface DataElementValue {
+interface Facility {
+  values: Array<DataElementValue>;
+  'facility-code': string;
+}
+
+interface DataElementValue {
   value: number;
-  dataElementCode: string;
-  organizationUnitCode: string;
-  period: string;
+  'product-code': string;
 }
