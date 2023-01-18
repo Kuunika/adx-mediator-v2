@@ -23,6 +23,7 @@ export class Dhis2Service {
     const reportingPeriod = createDataElementsDto['reporting-period'];
     //TODO: this should read the path from an env
 
+    // TODO: It should log that a client id has not been passed in the metadata and throw an error
     if (
       !existsSync(
         join(
