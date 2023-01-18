@@ -7,7 +7,7 @@ services:
     restart: always
     container_name: ${HOST}
     networks:
-      - openhim
+      - ${DOCKER_NETWORK_NAME}
     build: .
     ports:
       - "${PORT}:${PORT}"
