@@ -1,0 +1,1433 @@
+[
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Non-pregnant Females Newly Registered",
+   "Data Element Short Name": "ART C Non-pregnant Females Newly Registered",
+   "code": "16-q",
+   "Category Name": "default",
+   "dhis2_code": "C9qtYy1Zr6T",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Males (all ages) Cumulative",
+   "Data Element Short Name": "HCC Males (all ages) Cumulative",
+   "code": "62-c",
+   "Category Name": "default",
+   "dhis2_code": "FUXUSZnPbHx",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Pregnant Females Newly Registered",
+   "Data Element Short Name": "ART C Pregnant Females Newly Registered",
+   "code": "17-q",
+   "Category Name": "default",
+   "dhis2_code": "MfLkwJqjTLb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Confirmed infected patients Cumulative",
+   "Data Element Short Name": "Confirmed infected patients Cumulative",
+   "code": "67-c",
+   "Category Name": "default",
+   "dhis2_code": "UrwMa3DPj1Y",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 1A",
+   "Data Element Short Name": "Adult Formulations Regimen 1A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "ScRtf4ul6N4",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Current episode of TB Newly Registered",
+   "Data Element Short Name": "Current episode of TB Newly Registered",
+   "code": "93-q",
+   "Category Name": "default",
+   "dhis2_code": "L11dvkq2GDx",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Died within the 3rd month after ART initiation",
+   "Data Element Short Name": "Died within the 3rd month after ART initiation",
+   "code": "100-c",
+   "Category Name": "default",
+   "dhis2_code": "nX5GpZnKzrZ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 11P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 11P",
+   "code": "1698-p",
+   "Category Name": "default",
+   "dhis2_code": "wxw7PllyMRW",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adults 15 years or older at enrolment Cumulative",
+   "Data Element Short Name": "Adults 15 years or older at enrolment Cumulative",
+   "code": "55-c",
+   "Category Name": "default",
+   "dhis2_code": "zDwzoAqoG0a",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 0-3 doses missed",
+   "Data Element Short Name": "HIV ART2 0-3 doses missed",
+   "code": "123-c",
+   "Category Name": "default",
+   "dhis2_code": "JrcypjaTaes",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Side Effects- Unknown",
+   "Data Element Short Name": "Side Effects- Unknown",
+   "code": "772-c",
+   "Category Name": "default",
+   "dhis2_code": "NBaOZ6uScKe",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Transferred out (pre-ART)",
+   "Data Element Short Name": "Transferred out (pre-ART)",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "FM9c7lj8zPo",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients transferred in Cumulative",
+   "Data Element Short Name": "Patients transferred in Cumulative",
+   "code": "51-c",
+   "Category Name": "default",
+   "dhis2_code": "wDjU30caDbd",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 0A",
+   "Data Element Short Name": "Adult Formulations Regimen 0A",
+   "code": "1448-c",
+   "Category Name": "default",
+   "dhis2_code": "mfaV9kZpoAj",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART WHO stage 3 Cumulative",
+   "Data Element Short Name": "WHO stage 3 Cumulative",
+   "code": "44-c",
+   "Category Name": "default",
+   "dhis2_code": "AAp3gCBikLs",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Unknown / reason outside guidelines Newly Registered",
+   "Data Element Short Name": "Unknown / reason outside guidelines Newly Register",
+   "code": "89-q",
+   "Category Name": "default",
+   "dhis2_code": "aPgNjiAzcIB",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Children 2 - below 24 months at enrolm Cumulative",
+   "Data Element Short Name": "Children 2 - below 24 months at enrolm Cumulative",
+   "code": "57-c",
+   "Category Name": "default",
+   "dhis2_code": "xMAYxKifuqH",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Infants +ADw-12 mths PCR+- Newly Registered",
+   "Data Element Short Name": "Infants +ADw-12 mths PCR+- Newly Registered",
+   "code": "32-q",
+   "Category Name": "default",
+   "dhis2_code": "oE8oVLQRWce",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Exposed infants Cumulative",
+   "Data Element Short Name": "Exposed infants Cumulative",
+   "code": "61-c",
+   "Category Name": "default",
+   "dhis2_code": "XcxQ5TeDXnt",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason for Starting ART WHO stage 4 Cumulative",
+   "Data Element Short Name": "WHO stage 4 Cumulative",
+   "code": "45-c",
+   "Category Name": "default",
+   "dhis2_code": "tWUNa28bryZ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total HIV Positive",
+   "Data Element Short Name": "HIV ART2 Total HIV Positive",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "QvI5LMCLAuz",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients retained in pre-ART currently on IPT",
+   "Data Element Short Name": "Patients retained in pre-ART currently on IPT",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "c2dB2iuheSr",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients enrolled first time Newly Registered",
+   "Data Element Short Name": "Patients enrolled first time Newly Registered",
+   "code": "49-q",
+   "Category Name": "default",
+   "dhis2_code": "XxrQjQUUqVH",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 9P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 9P",
+   "code": "121-c",
+   "Category Name": "default",
+   "dhis2_code": "KefhLR7dmSd",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 7A",
+   "Data Element Short Name": "Adult Formulations Regimen 7A",
+   "code": "119-c",
+   "Category Name": "default",
+   "dhis2_code": "VeprHWa54dz",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Pregnant Females Cumulative",
+   "Data Element Short Name": "HCC Pregnant Females Cumulative",
+   "code": "65-c",
+   "Category Name": "default",
+   "dhis2_code": "s7uI7ugYhYw",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 CD4 count machine installed at this facility",
+   "Data Element Short Name": "HIV ART2 CD4 count machine installed at facility",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "wz0PjaamNLG",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Pregnant as of last visit before end of Quarter",
+   "Data Element Short Name": "HIV ART2 Pregnant as of last visit",
+   "code": "1701-c",
+   "Category Name": "default",
+   "dhis2_code": "hpbYG2tCvi5",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Non-pregnant Females Newly Registered",
+   "Data Element Short Name": "HCC Non-pregnant Females Newly Registered",
+   "code": "64-q",
+   "Category Name": "default",
+   "dhis2_code": "LpFvmfJwFBb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Est number of patients needing Diflucan per quarter",
+   "Data Element Short Name": "HIV ART2 Est number of patients needing Diflucan",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "YfcMaxk2MIz",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Asymptomatic Mild Cumulative",
+   "Data Element Short Name": "Starting ART Asymptomatic Mild Cumu",
+   "code": "1675-c",
+   "Category Name": "default",
+   "dhis2_code": "ZWJFz0Nucq8",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Adults 15 years or older at ART initiation Newly Registered",
+   "Data Element Short Name": "ART C Adults 15 years or older at ART initiation N",
+   "code": "19-q",
+   "Category Name": "default",
+   "dhis2_code": "vVoyt03u533",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 8A",
+   "Data Element Short Name": "Adult Formulations Regimen 8A",
+   "code": "120-c",
+   "Category Name": "default",
+   "dhis2_code": "RfzZMjJxOq9",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Pregnant Females Newly Registered",
+   "Data Element Short Name": "HCC Pregnant Females Newly Registered",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "UfgkcyzLu7v",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Males Newly Registered",
+   "Data Element Short Name": "ART C Males Newly Registered",
+   "code": "14-q",
+   "Category Name": "default",
+   "dhis2_code": "eJgkcLIxERw",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC total registered Cumulative",
+   "Data Element Short Name": "HCC total registered Cumulative",
+   "code": "47-c",
+   "Category Name": "default",
+   "dhis2_code": "uWYtYpFBleR",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Cryptococcal meningitis new patients",
+   "Data Element Short Name": "HIV ART2 Cryptococcal meningitis new patients",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "qi1RY6DPhgQ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Cumulative",
+   "Data Element Short Name": "Patients initiated on ART first time Cumulative",
+   "code": "10-c",
+   "Category Name": "Female Non-Pregnant",
+   "dhis2_code": "LFvx47fGcU6",
+   "Category ID": "GI5U1q5ek6G",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Cumulative",
+   "Data Element Short Name": "Patients initiated on ART first time Cumulative",
+   "code": "10-c",
+   "Category Name": "Female Pregnant",
+   "dhis2_code": "LFvx47fGcU6",
+   "Category ID": "OB4KZPQ9DBV",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Cumulative",
+   "Data Element Short Name": "Patients initiated on ART first time Cumulative",
+   "code": "10-c",
+   "Category Name": "Male",
+   "dhis2_code": "LFvx47fGcU6",
+   "Category ID": "rxhPVbgP4pP",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Cryptococcal meningitis refill patients",
+   "Data Element Short Name": "HIV ART2 Cryptococcal meningitis refill patients",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "TcZQcbkACM6",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Defaulted (pre-ART)",
+   "Data Element Short Name": "Defaulted (pre-ART)",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "xbKF1YNGSHT",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 10A",
+   "Data Element Short Name": "Adult Formulations Regimen 10A",
+   "code": "1695-c",
+   "Category Name": "default",
+   "dhis2_code": "nwPlZlwzapg",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Infants below 2 months at enrollment Newly Registered",
+   "Data Element Short Name": "Infants below 2 months at enrollment Newly Registe",
+   "code": "66-q",
+   "Category Name": "default",
+   "dhis2_code": "YtBXFZR3b1e",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Children 12-59months Newly Registered",
+   "Data Element Short Name": "Children 12-59 months Newly",
+   "code": "88-q",
+   "Category Name": "default",
+   "dhis2_code": "Im1MJc8n6qD",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Males (all ages) Newly Registered",
+   "Data Element Short Name": "HCC Males (all ages) Newly Registered",
+   "code": "62-q",
+   "Category Name": "default",
+   "dhis2_code": "P44iCdZnxC7",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 4P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 4P",
+   "code": "112-c",
+   "Category Name": "default",
+   "dhis2_code": "BHvKzJmxLHk",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adherence - 0 – 6 doses missed",
+   "Data Element Short Name": "Adherence - 0 – 6 doses missed",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "vqFUodeXN6I",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Children 12-59months Cumulative",
+   "Data Element Short Name": "Children 12-59 months Cumulative",
+   "code": "88-c",
+   "Category Name": "default",
+   "dhis2_code": "RqV1NHEl3oC",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Died within the 1st month after ART initiation",
+   "Data Element Short Name": "Died within the 1st month after ART initiation",
+   "code": "98-c",
+   "Category Name": "default",
+   "dhis2_code": "nytlV7gX9mO",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adherence Unknown",
+   "Data Element Short Name": "Adherence Unknown",
+   "code": "771-c",
+   "Category Name": "default",
+   "dhis2_code": "HtwVQNioqo7",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients retained in pre-ART currently on CPT",
+   "Data Element Short Name": "Patients retained in pre-ART currently on CPT",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "c8tC4P5xrHq",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Children below 24 m at ART initiation Newly Registered",
+   "Data Element Short Name": "ART Children below 24 m at ART initiation Newly Re",
+   "code": "39-q",
+   "Category Name": "default",
+   "dhis2_code": "YaDKdhGubIX",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients re-initiated on ART Newly Registered",
+   "Data Element Short Name": "Patients re-initiated on ART Newly Registered",
+   "code": "11-q",
+   "Category Name": "default",
+   "dhis2_code": "GsIHgZkmh13",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients transferred in on ART Newly Registered",
+   "Data Element Short Name": "Patients transferred in on ART Newly Registered",
+   "code": "12-q",
+   "Category Name": "default",
+   "dhis2_code": "KrMSFlOzYOh",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Died (pre-ART)",
+   "Data Element Short Name": "Died (pre-ART)",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "cYXAXWoQEDO",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART TLC <1 200/mm3 Cumulative",
+   "Data Element Short Name": "TLC <1 200/mm3 Cumulative",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "hS9WW4pWwo1",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Regimen 12A",
+   "Data Element Short Name": "HIV ART2 Regimen 12A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "MtIcc18YC8j",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients re-enrolled Newly Registered",
+   "Data Element Short Name": "Patients re-enrolled Newly Registered",
+   "code": "50-q",
+   "Category Name": "default",
+   "dhis2_code": "U1d9mhqtvdN",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Adults 15 years or older at ART initiation Cumulative",
+   "Data Element Short Name": "ART C Adults 15 years or older at ART initiation C",
+   "code": "19-c",
+   "Category Name": "default",
+   "dhis2_code": "r09fpUgbcir",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total CD4 counts done at this facility in last quarter",
+   "Data Element Short Name": "HIV ART2 CD4 counts done at facility",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "chbwluThhaY",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Other (Paed Or Adult",
+   "Data Element Short Name": "Adult Formulations Other (Paed Or Adult",
+   "code": "122-c",
+   "Category Name": "default",
+   "dhis2_code": "Sh0PxukYRFX",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART CD4 below threshold Cumulative",
+   "Data Element Short Name": "CD4 below threshold Cumulative",
+   "code": "43-c",
+   "Category Name": "default",
+   "dhis2_code": "f8pF5lxm2V0",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Children 2 - below 24 months at enrolm Newly Registered",
+   "Data Element Short Name": "Children 2 - below 24 months at enrolm Newly Regis",
+   "code": "57-q",
+   "Category Name": "default",
+   "dhis2_code": "WZ14sLMPtxg",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Oesophagael candidiasis new patients",
+   "Data Element Short Name": "HIV ART2 Oesophagael candidiasis patients",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "YAq2ldtzuvZ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 2A",
+   "Data Element Short Name": "Adult Formulations Regimen 2A",
+   "code": "114-c",
+   "Category Name": "default",
+   "dhis2_code": "FQV1VHg0TFH",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Total alive and on ART",
+   "Data Element Short Name": "Total alive and on ART",
+   "code": "96-c",
+   "Category Name": "default",
+   "dhis2_code": "lpkTPw699z9",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Children 24 m - 14 yrs at ART initiation Cumulative",
+   "Data Element Short Name": "ART C Children 24 m - 14 yrs at ART initiation Cum",
+   "code": "40-c",
+   "Category Name": "default",
+   "dhis2_code": "qKP4ln9iqm1",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Current TB Status suspected",
+   "Data Element Short Name": "Current TB Status suspected",
+   "code": "126-c",
+   "Category Name": "default",
+   "dhis2_code": "ty5kGiQbDJc",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Regimen 13A",
+   "Data Element Short Name": "HIV ART2 Regimen 13A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "r9Y8JcBzvTZ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Children 24 months - 14 yrs at enrolm Cumulative",
+   "Data Element Short Name": "Children 24 months - 14 yrs at enrolm Cumulative",
+   "code": "56-c",
+   "Category Name": "default",
+   "dhis2_code": "Or5K6cj9oLn",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 11A",
+   "Data Element Short Name": "Adult Formulations Regimen 11A",
+   "code": "1696-c",
+   "Category Name": "default",
+   "dhis2_code": "Q3Yv9q1ST3u",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total on ART at TB Tx Start",
+   "Data Element Short Name": "HIV ART2 Total on ART at TB Tx Start",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "gAiAMhW2Yqj",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Current TB Status Unknown",
+   "Data Element Short Name": "Current TB Status Unknown",
+   "code": "774-c",
+   "Category Name": "default",
+   "dhis2_code": "HQ7dGVAQW2O",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART TB within the last 2 years Cumulative",
+   "Data Element Short Name": "TB within the last 2 years Cumulative",
+   "code": "92-c",
+   "Category Name": "default",
+   "dhis2_code": "TUxmCczixfc",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Infants +ADw-12 mths PCR+- Cumulative",
+   "Data Element Short Name": "Infants +ADw-12 mths PCR+- Cumulative",
+   "code": "32-c",
+   "Category Name": "default",
+   "dhis2_code": "WRnaJZsvWCW",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART TB within the last 2 years Newly Registered",
+   "Data Element Short Name": "TB within the last 2 years Newly Registered",
+   "code": "92-q",
+   "Category Name": "default",
+   "dhis2_code": "JKWyS1JYeaa",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Children 12+AC0-23 months Cumulative",
+   "Data Element Short Name": "Children 12+AC0-23 months Cumulative",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "KVEuOYOHKf4",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Infants below 2 months at enrollment Cumulative",
+   "Data Element Short Name": "Infants below 2 months at enrollment Cumulative",
+   "code": "66-c",
+   "Category Name": "default",
+   "dhis2_code": "RWbF8diNpcG",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Asymptomatic Mild Newly",
+   "Data Element Short Name": "Starting ART Asymptomatic Mild Newly",
+   "code": "1675-q",
+   "Category Name": "default",
+   "dhis2_code": "p8ge4QCnZQG",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 3P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 3P",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "X1MJM1gJr9z",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Died after the end of the 3rd month after ART initiation",
+   "Data Element Short Name": "Died after the end of the 3rd month after ART init",
+   "code": "101-c",
+   "Category Name": "default",
+   "dhis2_code": "uwYS6aJsX1X",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Confirmed infected patients Newly Registered",
+   "Data Element Short Name": "Confirmed infected patients Newly Registered",
+   "code": "67-q",
+   "Category Name": "default",
+   "dhis2_code": "vmUvZ5WqCQt",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients enrolled first time Cumulative",
+   "Data Element Short Name": "Patients enrolled first time Cumulative",
+   "code": "49-c",
+   "Category Name": "default",
+   "dhis2_code": "ktwTiqAq1l2",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Never TB or TB over 2 years ago Newly Registered",
+   "Data Element Short Name": "Never TB or TB over 2 years ago Newly Registered",
+   "code": "91-q",
+   "Category Name": "default",
+   "dhis2_code": "JLl9p4WrjfD",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 TB Treatment Registration Site",
+   "Data Element Short Name": "HIV ART2 TB Treatment Registration Site",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "arxWk920E4v",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Started ART",
+   "Data Element Short Name": "Started ART",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "W5LOZX4iz4y",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Kaposi’s Sarcoma Cumulative",
+   "Data Element Short Name": "Kaposi’s Sarcoma Cumulative",
+   "code": "94-c",
+   "Category Name": "default",
+   "dhis2_code": "PUmX1kWeBaX",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Breastfeeding mothers Newly Registered",
+   "Data Element Short Name": "Breastfeeding mothers Newly Registered",
+   "code": "87-q",
+   "Category Name": "default",
+   "dhis2_code": "RCp59NPyVwv",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Pregnant women Newly Registered",
+   "Data Element Short Name": "Pregnant women Newly Registered",
+   "code": "86-q",
+   "Category Name": "default",
+   "dhis2_code": "ZTj5ZcMCbNk",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Women received Depo at ART in the last quarter",
+   "Data Element Short Name": "Women received Depo at ART in the last quarter",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "BPJ8uzo4yFw",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 3A",
+   "Data Element Short Name": "Adult Formulations Regimen 3A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "zfBbWMQtCu3",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Urine-LAM tests done",
+   "Data Element Short Name": "HIV ART2 Urine-LAM tests done",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "KLu2wa3xwVl",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 2P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 2P",
+   "code": "110-c",
+   "Category Name": "default",
+   "dhis2_code": "YjmcT3EkLlz",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC Non-pregnant Females Cumulative",
+   "Data Element Short Name": "HCC Non-pregnant Females Cumulative",
+   "code": "64-c",
+   "Category Name": "default",
+   "dhis2_code": "G04bjE97ia1",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Breastfeeding as of last visit before end of Quarter",
+   "Data Element Short Name": "HIV ART2 Breastfeeding as of last Quarter",
+   "code": "1702-c",
+   "Category Name": "default",
+   "dhis2_code": "RHsxpgKedqo",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 5A",
+   "Data Element Short Name": "Adult Formulations Regimen 5A",
+   "code": "117-c",
+   "Category Name": "default",
+   "dhis2_code": "yXTreq2pvOE",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Side effects -None",
+   "Data Element Short Name": "Side effects -None",
+   "code": "747-c",
+   "Category Name": "default",
+   "dhis2_code": "joHwSs05CCe",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Never TB or TB over 2 years ago Cumulative",
+   "Data Element Short Name": "Never TB or TB over 2 years ago Cumulative",
+   "code": "91-c",
+   "Category Name": "default",
+   "dhis2_code": "G0g4EPiIygc",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients re-enrolled Newly Cumulative",
+   "Data Element Short Name": "Patients re-enrolled Newly Cumulative",
+   "code": "50-c",
+   "Category Name": "default",
+   "dhis2_code": "a3cEHq7UxH4",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Regimen 14A",
+   "Data Element Short Name": "HIV ART2 Regimen 14A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "bNmLi1cFcUb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Pres. Sev. HIV disease age +ADw-12 m Cumulative",
+   "Data Element Short Name": "Pres. Sev. HIV disease age +ADw-12 m Cumulative",
+   "code": "31-c",
+   "Category Name": "default",
+   "dhis2_code": "RZPgPW2eFdL",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 1P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 1P",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "gSusRklZWwV",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART TLC <1 200/mm3 Newly Registered",
+   "Data Element Short Name": "TLC <1 200/mm3 Newly Registered",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "oW0Jqu9clI0",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total Persons Given PEP in last Quarter",
+   "Data Element Short Name": "HIV ART2 Total Persons Given PEP in last Quarter",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "cLFDRgvHfQ3",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adherence 7+ doses missed",
+   "Data Element Short Name": "Adherence 7+ doses missed",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "x07WYGLd1th",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART WHO stage 3 Newly Registered",
+   "Data Element Short Name": "WHO stage 3 Newly Registered",
+   "code": "44-q",
+   "Category Name": "default",
+   "dhis2_code": "WBtMx2mpHtM",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Children 24 months - 14 yrs at enrolm Newly Registered",
+   "Data Element Short Name": "Children 24 months - 14 yrs at enrolm Newly Regist",
+   "code": "56-q",
+   "Category Name": "default",
+   "dhis2_code": "CTmczjxOXSV",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Preg/bf All others as of last visit before end of Quarter",
+   "Data Element Short Name": "HIV ART2 All others as of last quarter visit",
+   "code": "1703-c",
+   "Category Name": "default",
+   "dhis2_code": "W3cXzIPMK3g",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adults 15 years or older at enrolment Newly Registered",
+   "Data Element Short Name": "Adults 15 years or older at enrolment Newly Regist",
+   "code": "55-q",
+   "Category Name": "default",
+   "dhis2_code": "SmPxNLXOvwY",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Pregnant women Cumulative",
+   "Data Element Short Name": "Pregnant women Cumulative",
+   "code": "86-c",
+   "Category Name": "default",
+   "dhis2_code": "J7tos1qeQlm",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Current TB Status Conf. not on Rx",
+   "Data Element Short Name": "Current TB Status Conf. not on Rx",
+   "code": "127-c",
+   "Category Name": "default",
+   "dhis2_code": "sDEkeRHiMxB",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total TB Cases with Known HIV Status",
+   "Data Element Short Name": "HIV ART2 Total TB Cases with Known HIV Status",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "tvVMaYq96ab",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total registered Newly Registered",
+   "Data Element Short Name": "Total registered Newly Registered",
+   "code": "5-q",
+   "Category Name": "default",
+   "dhis2_code": "N9cO1PR0eIB",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Current episode of TB Cumulative",
+   "Data Element Short Name": "Current episode of TB Cumulative",
+   "code": "93-c",
+   "Category Name": "default",
+   "dhis2_code": "RFRlDhb2Vil",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Children below 24 m at ART initiation Cumulative",
+   "Data Element Short Name": "ART C Children below 24 m at ART initiation Cumula",
+   "code": "39-c",
+   "Category Name": "default",
+   "dhis2_code": "kOlV5AnWzpf",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 HCC total registered Newly Registered",
+   "Data Element Short Name": "HCC total registered Newly Registered",
+   "code": "47-q",
+   "Category Name": "default",
+   "dhis2_code": "lAmrug7PNns",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total registered Cumulative",
+   "Data Element Short Name": "Total registered Cumulative",
+   "code": "5-c",
+   "Category Name": "default",
+   "dhis2_code": "yfpIQoMNfGV",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Current TB Status Conf. on TB Rx",
+   "Data Element Short Name": "Current TB Status Conf. on TB Rx",
+   "code": "128-c",
+   "Category Name": "default",
+   "dhis2_code": "k7bxHcJL9H9",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 9A",
+   "Data Element Short Name": "Adult Formulations Regimen 9A",
+   "code": "1694-c",
+   "Category Name": "default",
+   "dhis2_code": "QCRZrVUyQmD",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Exposed infants Newly Registered",
+   "Data Element Short Name": "Exposed infants Newly Registered",
+   "code": "61-q",
+   "Category Name": "default",
+   "dhis2_code": "y1Dnt4BWoOb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Regimen 15A",
+   "Data Element Short Name": "HIV ART2 Regimen 15A",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "EbP64sbe7mM",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients transferred in on ART Cumulative",
+   "Data Element Short Name": "Patients transferred in on ART Cumulative",
+   "code": "12-c",
+   "Category Name": "default",
+   "dhis2_code": "pRG7a9UqGm9",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Stopped taking ARVs",
+   "Data Element Short Name": "Stopped taking ARVs",
+   "code": "103-c",
+   "Category Name": "default",
+   "dhis2_code": "HwcnaK15tof",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Males Cumulative",
+   "Data Element Short Name": "ART C Males Cumulative",
+   "code": "14-c",
+   "Category Name": "default",
+   "dhis2_code": "fKCCviqIWuw",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Paediatric Formulation Regimen 0P",
+   "Data Element Short Name": "Paediatric Formulation Regimen 0P",
+   "code": "1449-c",
+   "Category Name": "default",
+   "dhis2_code": "U69U7OwS4K0",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Pres. Sev. HIV disease age +ADw-12 m Newly Registered",
+   "Data Element Short Name": "Pres. Sev. HIV disease age +ADw-12 m Newly Registe",
+   "code": "31-q",
+   "Category Name": "default",
+   "dhis2_code": "Z1YlaQYDj5H",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason for Starting ART WHO stage 4 Newly Registered",
+   "Data Element Short Name": "WHO stage 4 Newly Registered",
+   "code": "45-q",
+   "Category Name": "default",
+   "dhis2_code": "vfiTWdunqCn",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total retained alive in pre-ART follow-up",
+   "Data Element Short Name": "Total retained alive in pre-ART follow-up",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "CsnlqWWZtnS",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Kaposi’s Sarcoma Newly Registered",
+   "Data Element Short Name": "Kaposi’s Sarcoma Newly Registered",
+   "code": "94-q",
+   "Category Name": "default",
+   "dhis2_code": "YfksrXloNWO",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Breastfeeding mothers Cumulative",
+   "Data Element Short Name": "Breastfeeding mothers Cumulative",
+   "code": "87-c",
+   "Category Name": "default",
+   "dhis2_code": "ANwhvGRnH2H",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Unknown / reason outside guidelines Cumulative",
+   "Data Element Short Name": "Unknown / reason outside guidelines Cumulative",
+   "code": "89-c",
+   "Category Name": "default",
+   "dhis2_code": "ABguqVTycOs",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Non-pregnant Females Cumulative",
+   "Data Element Short Name": "ART C Non-pregnant Females Cumulative",
+   "code": "16-c",
+   "Category Name": "default",
+   "dhis2_code": "CkyOdHHMb4w",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Urine-LAM positive tests",
+   "Data Element Short Name": "HIV ART2 Urine-LAM positive tests",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "saTR9S05AEE",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Died total",
+   "Data Element Short Name": "Died total",
+   "code": "97-c",
+   "Category Name": "default",
+   "dhis2_code": "ctPvpxl8VEj",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Transferred Out",
+   "Data Element Short Name": "Transferred Out",
+   "code": "104-c",
+   "Category Name": "default",
+   "dhis2_code": "KPyYd2KXphv",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 4+ doses missed",
+   "Data Element Short Name": "HIV ART2 4+ doses missed",
+   "code": "124-c",
+   "Category Name": "default",
+   "dhis2_code": "pINKqngkiwR",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Children 24 m - 14 yrs at ART initiation Newly Registered",
+   "Data Element Short Name": "ART C Children 24 m - 14 yrs at ART initiation New",
+   "code": "40-q",
+   "Category Name": "default",
+   "dhis2_code": "drvDay5y8Gb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Women received Depo at pre-ART in the last quarter",
+   "Data Element Short Name": "Women received Depo at pre-ART in the last quarter",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "fxRucP3lc3a",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART Children 12+AC0-23 months Newly Registered",
+   "Data Element Short Name": "Children 12+AC0-23 months Newly Registered",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "fRVzI087cXo",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients re-initiated on ART Cumulative",
+   "Data Element Short Name": "Patients re-initiated on ART Cumulative",
+   "code": "11-c",
+   "Category Name": "default",
+   "dhis2_code": "TxASVSUtala",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 6A",
+   "Data Element Short Name": "Adult Formulations Regimen 6A",
+   "code": "118-c",
+   "Category Name": "default",
+   "dhis2_code": "SLpLt0ri18a",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Defaulted",
+   "Data Element Short Name": "Defaulted",
+   "code": "102-c",
+   "Category Name": "default",
+   "dhis2_code": "hoCDHKviOuc",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Cryptococcal antigen positive tests",
+   "Data Element Short Name": "HIV ART2 Cryptococcal antigen positive tests",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "deyDxfdMU5l",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Cryptococcal antigen tests done",
+   "Data Element Short Name": "HIV ART2 Cryptococcal antigen tests done",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "axlR79MHit4",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Newly Registered",
+   "Data Element Short Name": "Patients initiated on ART first time Newly Registe",
+   "code": "10-q",
+   "Category Name": "Female Non-Pregnant",
+   "dhis2_code": "rCLmbsWIn0B",
+   "Category ID": "GI5U1q5ek6G",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Newly Registered",
+   "Data Element Short Name": "Patients initiated on ART first time Newly Registe",
+   "code": "10-q",
+   "Category Name": "Female Pregnant",
+   "dhis2_code": "rCLmbsWIn0B",
+   "Category ID": "OB4KZPQ9DBV",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients initiated on ART first time Newly Registered",
+   "Data Element Short Name": "Patients initiated on ART first time Newly Registe",
+   "code": "10-q",
+   "Category Name": "Male",
+   "dhis2_code": "rCLmbsWIn0B",
+   "Category ID": "rxhPVbgP4pP",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients alive on ART currently on CPT",
+   "Data Element Short Name": "Patients alive on ART currently on CPT",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "uFg08PPMInH",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total persons given PEP in last quarter",
+   "Data Element Short Name": "Total persons given PEP in last quarter",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "m63iqbE0HiI",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Total TB Cases Registered",
+   "Data Element Short Name": "HIV ART2 Total TB Cases Registered",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "jlmrlBD5883",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Reason For Starting ART CD4 below threshold Newly Registered",
+   "Data Element Short Name": "CD4 below threshold Newly Registered",
+   "code": "43-q",
+   "Category Name": "default",
+   "dhis2_code": "jS9s3zqgsle",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Secondary Outcome Adult Formulations Regimen 4A",
+   "Data Element Short Name": "Adult Formulations Regimen 4A",
+   "code": "116-c",
+   "Category Name": "default",
+   "dhis2_code": "nzytEjKq9MS",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Primary Outcome Died within the 2nd month after ART initiation",
+   "Data Element Short Name": "Died within the 2nd month after ART initiation",
+   "code": "99-c",
+   "Category Name": "default",
+   "dhis2_code": "KhmVgdRFqsb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Adult ART with BP recorded at least once this year",
+   "Data Element Short Name": "HIV ART2 Adult ART with BP recorded this year",
+   "code": "",
+   "Category Name": "default",
+   "dhis2_code": "kWl66oYuM65",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 ART Clinic Pregnant Females Cumulative",
+   "Data Element Short Name": "ART C Pregnant Females Cumulative",
+   "code": "17-c",
+   "Category Name": "default",
+   "dhis2_code": "SxovbWwj2ql",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Current TB Status Not suspected",
+   "Data Element Short Name": "Current TB Status Not suspected",
+   "code": "125-c",
+   "Category Name": "default",
+   "dhis2_code": "BKK07R3pJiJ",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Patients transferred in Newly Registered",
+   "Data Element Short Name": "Patients transferred in Newly Registered",
+   "code": "51-q",
+   "Category Name": "default",
+   "dhis2_code": "IcXaWV8et0Q",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ },
+ {
+   "Data Element Name": "HIV ART2 Side Effects- Any side Effects",
+   "Data Element Short Name": "Side Effects- Any side Effects",
+   "code": "106-c",
+   "Category Name": "default",
+   "dhis2_code": "s3GrgfCyDZb",
+   "Category ID": "Tt7fU5lUhAU",
+   "Attribute ID": "Tt7fU5lUhAU"
+ }
+]
