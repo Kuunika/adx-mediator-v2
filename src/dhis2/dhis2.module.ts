@@ -1,49 +1,32 @@
 import { Module } from '@nestjs/common';
 import { Dhis2Service } from './dhis2.service';
 import { LoggingModule } from 'src/logging/logging.module';
-import { ClientsModule, Transport } from '@nestjs/microservices';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { HttpModule } from '@nestjs/axios';
+import { Agent } from 'node:https';
 
 //TODO: find a way to throw an error if the service is unable to connect to the rabbitmq instance
 @Module({
   imports: [
+    ConfigModule,
     LoggingModule,
-    ClientsModule.registerAsync([
-      {
-        name: 'ADX_LOGISTICS_SERVICE',
-        inject: [ConfigService],
-        imports: [ConfigModule],
-        useFactory(config: ConfigService) {
-          return {
-            transport: Transport.RMQ,
-            options: {
-              urls: [config.getOrThrow<string>('MEDIATOR_RABBITMQ_URI')],
-              queue: config.getOrThrow<string>('ADX_LOGISTICS_SERVICE_QUEUE'),
-              queueOptions: {
-                durable: true,
-              },
-            },
-          };
-        },
+    HttpModule.registerAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => {
+        return {
+          auth: {
+            password: config.get<string>('DHIS2_PASSWORD'),
+            username: config.get<string>('DHIS2_USERNAME'),
+          },
+          timeout: 50_000,
+          baseURL: config.get<string>('DHIS2_URL'),
+          httpsAgent: new Agent({
+            rejectUnauthorized: false,
+          }),
+        };
       },
-      {
-        name: 'GFPVAN_SERVICE',
-        inject: [ConfigService],
-        imports: [ConfigModule],
-        useFactory(config: ConfigService) {
-          return {
-            transport: Transport.RMQ,
-            options: {
-              urls: [config.getOrThrow<string>('MEDIATOR_RABBITMQ_URI')],
-              queue: config.getOrThrow<string>('GFPVAN_CLIENT_SERVICE_QUEUE'),
-              queueOptions: {
-                durable: true,
-              },
-            },
-          };
-        },
-      },
-    ]),
+    }),
   ],
   providers: [Dhis2Service],
   exports: [Dhis2Service],

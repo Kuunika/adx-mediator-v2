@@ -1,126 +1,23 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { CreateDataElementsDto } from './dto';
-import { writeFile, mkdir, rename } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
-import { join } from 'path';
-import { LoggingService } from 'src/logging/logging.service';
-import { ClientProxy } from '@nestjs/microservices';
+import { HttpService } from '@nestjs/axios';
+import { Injectable } from '@nestjs/common';
+import { lastValueFrom } from 'rxjs';
+import { MigrationSummary } from './types/migration-summary';
+import { CompletedDataSet, ReportedDataElementsPayload } from '../common/types';
 
 @Injectable()
 export class Dhis2Service {
-  constructor(
-    private readonly log: LoggingService,
-    //TODO: Consideration - as the number of system linked to the ADX continues we might need to find a better way or registering the client proxies
-    @Inject('ADX_LOGISTICS_SERVICE') private logistics_client: ClientProxy,
-    @Inject('GFPVAN_SERVICE') private gfpvan_client: ClientProxy,
-  ) {}
-
-  async create(
-    createDataElementsDto: CreateDataElementsDto,
-    metaData: { clientId: string; transactionId: string },
-  ) {
-    const { clientId, transactionId } = metaData;
-    const reportingPeriod = createDataElementsDto['reporting-period'];
-    //TODO: this should read the path from an env
-
-    // TODO: It should log that a client id has not been passed in the metadata and throw an error
-    if (
-      !existsSync(
-        join(
-          process.cwd(),
-          'adx_logistics',
-          'data_files',
-          clientId,
-          reportingPeriod,
-        ),
-      )
-    ) {
-      await mkdir(
-        join(
-          process.cwd(),
-          'adx_logistics',
-          'data_files',
-          clientId,
-          reportingPeriod,
-        ),
-      );
-      await mkdir(
-        join(
-          process.cwd(),
-          'adx_logistics',
-          'data_files',
-          clientId,
-          reportingPeriod,
-          'archive',
-        ),
-      );
-    }
-
-    const reportingFile = join(
-      process.cwd(),
-      'adx_logistics',
-      'data_files',
-      clientId,
-      reportingPeriod,
-      `${reportingPeriod}.json`,
+  constructor(private readonly httpService: HttpService) {}
+  async pushDataValueSets(
+    payload: CompletedDataSet | ReportedDataElementsPayload,
+  ): Promise<MigrationSummary> {
+    const migrationSummary = await lastValueFrom(
+      this.httpService.post<MigrationSummary>('/dataValueSets', payload, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        timeout: 900_000,
+      }),
     );
-
-    if (existsSync(reportingFile)) {
-      await rename(
-        reportingFile,
-        join(
-          process.cwd(),
-          'adx_logistics',
-          'data_files',
-          clientId,
-          reportingPeriod,
-          'archive',
-          `${reportingPeriod}.${Math.floor(Date.now() / 1000)}.json`,
-        ),
-      );
-    }
-
-    const dataElementsFile = join(
-      process.cwd(),
-      'adx_logistics',
-      'data_files',
-      clientId,
-      reportingPeriod,
-      `${reportingPeriod}.json`,
-    );
-    await writeFile(dataElementsFile, JSON.stringify(createDataElementsDto), {
-      encoding: 'utf8',
-      flag: 'w',
-    });
-    try {
-      await this.logistics_client.connect();
-    } catch (error) {
-      console.error(error);
-    }
-
-    this.logistics_client.emit<any>('adx_logistics', {
-      dataElementsFile,
-      client: metaData.clientId,
-      transactionId: metaData.transactionId,
-      timestamp: new Date().toISOString(),
-    });
-
-    if (clientId === 'openlmis') {
-      this.gfpvan_client.emit<any>('gfpvan', {
-        dataElementsFile,
-        client: metaData.clientId,
-        transactionId: metaData.transactionId,
-        timestamp: new Date().toISOString(),
-      });
-    }
-
-    this.log.info(
-      `Payload for transaction: ${transactionId} from client${clientId}`,
-      {
-        timestamp: new Date().toISOString(),
-        clientId,
-        transactionId,
-      },
-    );
+    return migrationSummary.data;
   }
 }

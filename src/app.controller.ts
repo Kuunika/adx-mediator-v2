@@ -1,28 +1,33 @@
 import { Body, Controller, Post, Headers } from '@nestjs/common';
 import { Dhis2Service } from './dhis2/dhis2.service';
-import { CreateDataElementsDto } from './dhis2/dto';
+import { AdxMigrationPayloadDto } from './common/dtos';
+import { EventDispatchService } from './event-dispatch/event-dispatch.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly dhis2Service: Dhis2Service) {}
+  constructor(private readonly eventDispatchService: EventDispatchService) {}
 
   @Post()
   async create(
     //TODO: create a validation pipe for the incoming data
-    @Body() createDataElementsDto: CreateDataElementsDto,
+    @Body() createDataElementsDto: AdxMigrationPayloadDto,
     @Headers() headers,
   ) {
     //TODO: there will need to be validation on the client and transaction ids
     const clientId = headers['x-openhim-clientid'];
     const transactionId = headers['x-openhim-transactionid'];
-    const result = await this.dhis2Service.create(createDataElementsDto, {
-      clientId,
-      transactionId,
-    });
+
+    const result = await this.eventDispatchService.create(
+      createDataElementsDto,
+      {
+        clientId,
+        transactionId,
+      },
+    );
     return {
       message: 'Payload received successfully',
       transactionId,
-      notificationsChannel: result,
+      notificationsChannel: null,
     };
   }
 }
