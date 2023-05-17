@@ -31,3 +31,4 @@ src/payloads
 adx_logistics
 
 .env
+migrations
