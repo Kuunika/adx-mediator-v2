@@ -7,6 +7,9 @@ import { TransformerService } from '../transformer/transformer.service';
 import { CompletedDataSet, ReportedDataElementsPayload } from '../common/types';
 import { MigrationService } from '../migration/migration.service';
 import { EmailService } from 'src/email/email.service';
+import { ConfigService } from '@nestjs/config';
+import { writeFile } from 'fs/promises';
+import { join } from 'path';
 
 export type AdxMigrationEventPayload = {
   migrationPayload: AdxMigrationPayloadDto;
@@ -35,6 +38,7 @@ export class AdxController {
   constructor(
     private readonly email: EmailService,
     private readonly log: LoggingService,
+    private readonly config: ConfigService,
     //Rename the call to the transformation service
     private readonly transformation: TransformerService,
     private readonly migration: MigrationService,
@@ -75,13 +79,30 @@ export class AdxController {
     //Migrate (Push)
     const migrationSummary = await this.migration.start(
       eventPayload.transactionId,
+      eventPayload.client,
       dhis2Payload,
     );
 
-    //Send Email
-    await this.email.send(
-      eventPayload.migrationPayload.description,
-      eventPayload.migrationPayload['reporting-period'],
+    this.log.info('Now Writing Migration Summary to Disc');
+    await writeFile(
+      join(
+        process.cwd(),
+        'migrations',
+        eventPayload.client,
+        eventPayload.transactionId,
+        'MigrationSummary.json',
+      ),
+      JSON.stringify(migrationSummary),
+      'utf-8',
     );
+
+    //Send Email
+    const SEND_EMAIL = this.config.getOrThrow('SEND_EMAIL_NOTIFICATIONS');
+    if (SEND_EMAIL === 'true') {
+      await this.email.send(
+        eventPayload.migrationPayload.description,
+        eventPayload.migrationPayload['reporting-period'],
+      );
+    }
   }
 }
