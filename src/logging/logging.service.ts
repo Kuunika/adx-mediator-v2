@@ -58,7 +58,7 @@ export class LoggingService {
   }
 
   private productionTransport() {
-    const maxLogFileSize = this.config.get<number>('MAX_LOG_FILE_SIZE') ?? 20;
+    const maxLogFileSize = this.config.get<number>('MAX_LOG_FILE_SIZE') ?? 200;
     const name = process.env.npm_package_name;
     return new DailyRotateFile({
       filename: `${name}-%DATE%.log`,
