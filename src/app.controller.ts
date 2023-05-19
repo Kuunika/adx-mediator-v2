@@ -1,5 +1,4 @@
 import { Body, Controller, Post, Headers } from '@nestjs/common';
-import { Dhis2Service } from './dhis2/dhis2.service';
 import { AdxMigrationPayloadDto } from './common/dtos';
 import { EventDispatchService } from './event-dispatch/event-dispatch.service';
 
