@@ -15,4 +15,4 @@ services:
       - .env
     volumes:
       - ${LOGS_PATH}:/usr/src/app/logs
-      - ${ADX_LOGISTICS_DIR}:/usr/src/app/adx_logistics
+      - ${ADX_MIGRATIONS}:/usr/src/app/migrations
