@@ -46,9 +46,10 @@ export class EmailService {
       });
       //TODO: The message id is not showing up in the logs
       this.log.info('Message sent: %s', info.messageId);
-    } catch (error) {
+    } catch (err) {
+      const error = err as Error;
       this.log.error('There was an issue sending the email');
-      this.log.error(error);
+      this.log.error(error.message);
     }
   }
 }
