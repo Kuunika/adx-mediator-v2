@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TransformerService } from './transformer.service';
-import { RegistryModule } from 'src/registry/registry.module';
+import { RegistryModule } from '../registry/registry.module';
+import { LoggingModule } from '../logging/logging.module';
 
 @Module({
   providers: [TransformerService],
-  imports:[RegistryModule],
+  imports: [RegistryModule, LoggingModule],
   exports: [TransformerService],
 })
 export class TransformerModule {}

@@ -5,13 +5,16 @@ import {
   CompletedDataSet,
   DataValue,
 } from '../common/types';
-import {} from 'src/common/types';
 import { AdxMigrationPayloadDto } from '../common/dtos';
-import { FacilityService } from 'src/registry/facility/facility.service';
+import { FacilityService } from '../registry/facility/facility.service';
+import { LoggingService } from '../logging/logging.service';
 
 @Injectable()
 export class TransformerService {
-  constructor(private readonly facilityService: FacilityService) {}
+  constructor(
+    private readonly facilityService: FacilityService,
+    private readonly log: LoggingService,
+  ) {}
 
   async toReportedDataElementsPayload(
     adxDataElements: AdxMigrationPayloadDto,
@@ -31,22 +34,43 @@ export class TransformerService {
   ): Promise<CompletedDataSet[]> {
     //TODO: this is hard coded and need to be changed to read the appropriate facilities list based on who the client is
     const facilities = await this.facilityService.getFacilities('mhfr');
-    return adxDataElements.facilities.map((facility) => {
-      const dataValues: DataValue[] = facility.values.map((reportedValues) => {
-        return {
-          categoryOptionCombo: reportedValues['category-option-combo'],
-          comment: 'ADX Data Submission',
-          value: reportedValues.value,
-          dataElement: reportedValues['data-element'],
-        };
-      });
-      return {
-        orgUnit: facilities.get(facility['facility-code']),
-        completeDate: adxDataElements['reporting-period'],
-        period: adxDataElements['reporting-period'],
-        dataSet: adxDataElements['data-set'],
-        dataValues,
-      };
-    });
+
+    const completedDataSet = adxDataElements.facilities.reduce(
+      (acc: CompletedDataSet[], facility) => {
+        const currentIterationsFacility = facilities.get(
+          facility['facility-code'],
+        );
+        if (currentIterationsFacility) {
+          const dataValues: DataValue[] = facility.values.map(
+            (reportedValues) => {
+              return {
+                categoryOptionCombo: reportedValues['category-option-combo'],
+                comment: 'ADX Data Submission',
+                value: reportedValues.value,
+                dataElement: reportedValues['data-element'],
+              };
+            },
+          );
+          return [
+            ...acc,
+            {
+              orgUnit: facilities.get(facility['facility-code']),
+              completeDate: adxDataElements['reporting-period'],
+              period: adxDataElements['reporting-period'],
+              dataSet: adxDataElements['data-set'],
+              dataValues,
+            },
+          ];
+        }
+
+        this.log.warn(`Facility Not Found with associated DHIS2 Code`, {
+          facilityCode: facility['facility-code'],
+        });
+        return acc;
+      },
+      [],
+    );
+
+    return completedDataSet;
   }
 }
