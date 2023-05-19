@@ -14,7 +14,8 @@ export class MigrationService {
   ) {}
 
   async start(
-    transactionId,
+    transactionId: string,
+    cleintId: string,
     dataElements: CompletedDataSet[] | ReportedDataElementsPayload[],
   ) {
     const migrationReport: MigrationSummary = {
@@ -43,7 +44,6 @@ export class MigrationService {
         'ENABLE_DHIS2_MIGRATION_LOGGING',
       );
       if (ENABLE_DHIS2_MIGRATION_LOGGING === 'true') {
-        this.log.info(JSON.stringify(importCount));
         this.log.info(
           `State Of Current Migration element ${index + 1} of ${
             dataElements.length
@@ -51,12 +51,13 @@ export class MigrationService {
           {
             transaction: transactionId,
             timestamp: new Date().toISOString(),
-            importCount,
-            conflicts,
+            importCount: migrationReport.importCount,
+            progress: ((index + 1) / dataElements.length) * 100,
           },
         );
       }
     }
+
     return migrationReport;
   }
 }
