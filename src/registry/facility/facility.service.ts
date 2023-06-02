@@ -34,8 +34,15 @@ export class FacilityService implements OnModuleInit {
   }
 
   async getFacilities(client: string): Promise<Map<string, string>> {
-    const cacheKey = `facilities-${client}`;
-    const cachedFacilities = await this.cacheManager.get(cacheKey);
+
+    //TODO: Refactor Method is getting verbose
+    // Checks the cache if the specific clients is already cached, otherwise returns the default MHFR (if cache is not stale)
+    let cachedFacilities = await this.cacheManager.get(client);
+
+    if (cachedFacilities === null) {
+      cachedFacilities = await this.cacheManager.get('mhfr');
+    }
+
     if (cachedFacilities !== undefined && cachedFacilities !== null) {
       this.log.info(`Using cached facilities for ${client}`);
       return cachedFacilities;
@@ -43,19 +50,16 @@ export class FacilityService implements OnModuleInit {
     const facilities = new Map<string, string>();
     let data: Facility[];
     try {
-      // const res = await lastValueFrom(
-      //   this.httpService.get<Facility[]>(
-      //     this.config.get<string>('MASTER_HEALTH_REGISTRY_URL'),
-      //   ),
-      // );
-      // data = res.data;
-      // //TODO: This should be configurable
-      // //TODO: If the data is empty we should probably throw an error
-      // await writeFile(
-      //   `${process.cwd()}/facilities/facilities.json`,
-      //   JSON.stringify(data),
-      // );
-      throw new Error('Not implemented');
+      const res = await lastValueFrom(
+        this.httpService.get<Facility[]>(
+          this.config.getOrThrow<string>('MASTER_HEALTH_REGISTRY_URL'),
+        ),
+      );
+      data = res.data;
+      await writeFile(
+        `${process.cwd()}/facilities/facilities.json`,
+        JSON.stringify(data),
+      );
     } catch (error) {
       this.log.error(
         "Couldn't fetch facilities from master health registry, now reading from backup file",
@@ -93,7 +97,7 @@ export class FacilityService implements OnModuleInit {
         }
       }
     }
-    await this.cacheManager.set(cacheKey, facilities, {
+    await this.cacheManager.set(client, facilities, {
       ttl: 60 * 60 * 24,
     });
 
