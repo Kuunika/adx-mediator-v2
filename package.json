@@ -1,6 +1,6 @@
 {
   "name": "adx-mediator-v2",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "NestJS port of Aggregated Data Exchange mediator.",
   "author": "Digital Health Division, Daniel Mwakanema, Brett Onions",
   "private": true,
