@@ -99,10 +99,7 @@ export class AdxController {
     //Send Email
     const SEND_EMAIL = this.config.getOrThrow('SEND_EMAIL_NOTIFICATIONS');
     if (SEND_EMAIL === 'true') {
-      await this.email.send(
-        eventPayload.migrationPayload.description,
-        eventPayload.migrationPayload['reporting-period'],
-      );
+      await this.email.send(migrationSummary, eventPayload);
     }
   }
 }

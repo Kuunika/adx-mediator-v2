@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { Dhis2Service } from './dhis2.service';
-import { LoggingModule } from 'src/logging/logging.module';
+import { LoggingModule } from '../logging/logging.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { HttpModule } from '@nestjs/axios';
 import { Agent } from 'node:https';
+import { LoggingService } from 'src/logging/logging.service';
 
 //TODO: find a way to throw an error if the service is unable to connect to the rabbitmq instance
 @Module({

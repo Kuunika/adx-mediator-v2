@@ -1,4 +1,12 @@
-export interface MigrationSummary {
+export interface ProductionMigrationSummary {
+  httpStatus: string;
+  httpStatusCode: number;
+  status: string;
+  message: string;
+  response: Response;
+}
+
+export interface Response {
   responseType: string;
   status: string;
   importOptions: ImportOptions;
@@ -10,7 +18,15 @@ export interface MigrationSummary {
 
 export interface Conflict {
   object: string;
+  objects: Objects;
   value: string;
+  errorCode: string;
+  property: string;
+  indexes: number[];
+}
+
+export interface Objects {
+  dataElement: string;
 }
 
 export interface ImportCount {
@@ -44,6 +60,8 @@ export interface ImportOptions {
   force: boolean;
   firstRowIsHeader: boolean;
   skipLastUpdated: boolean;
+  mergeDataValues: boolean;
+  skipCache: boolean;
 }
 
 export interface IDSchemes {}
