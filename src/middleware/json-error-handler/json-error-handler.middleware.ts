@@ -2,12 +2,14 @@ import { Injectable, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
+import { LoggingService } from 'src/logging/logging.service';
 
 @Injectable()
 export class JsonErrorHandlerMiddleware implements NestMiddleware {
+  constructor(private readonly log: LoggingService) {}
   async use(req: Request, res: Response, next: NextFunction) {
     try {
-      console.log('Attempting to parse payload');
+      this.log.info('Attempting to parse payload');
       const requestBody = JSON.parse(req.body);
 
       if (requestBody && typeof requestBody === 'object') {
@@ -17,7 +19,7 @@ export class JsonErrorHandlerMiddleware implements NestMiddleware {
       }
     } catch (error) {
       try {
-        console.log(
+        this.log.info(
           'Parse failed. Now checking if exiting migration data exists',
         );
         const clientId = req.headers['x-openhim-clientid'] as string;
