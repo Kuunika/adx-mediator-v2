@@ -34,7 +34,6 @@ export class FacilityService implements OnModuleInit {
   }
 
   async getFacilities(client: string): Promise<Map<string, string>> {
-
     //TODO: Refactor Method is getting verbose
     // Checks the cache if the specific clients is already cached, otherwise returns the default MHFR (if cache is not stale)
     let cachedFacilities = await this.cacheManager.get(client);
@@ -98,7 +97,8 @@ export class FacilityService implements OnModuleInit {
       }
     }
     await this.cacheManager.set(client, facilities, {
-      ttl: 60 * 60 * 24,
+      //NOTE: This cache is meant ot be refreshed every 30 min.
+      ttl: 1800,
     });
 
     this.log.info(`Cached facilities for ${client}, ${facilities.size} found`);

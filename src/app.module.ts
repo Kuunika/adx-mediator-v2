@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -13,6 +13,7 @@ import { EmailModule } from './email/email.module';
 import { RegistryModule } from './registry/registry.module';
 import { EventEmitterModule } from '@nestjs/event-emitter';
 import { TransformerModule } from './transformer/transformer.module';
+import { JsonErrorHandlerMiddleware } from './middleware/json-error-handler/json-error-handler.middleware';
 
 @Module({
   imports: [
@@ -31,4 +32,8 @@ import { TransformerModule } from './transformer/transformer.module';
   controllers: [AppController],
   providers: [AppService, OpenHimService],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(JsonErrorHandlerMiddleware).forRoutes('*');
+  }
+}

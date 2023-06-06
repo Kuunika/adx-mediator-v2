@@ -8,12 +8,13 @@ import { LoggingService } from './logging/logging.service';
 import { MediatorConfigBuilder } from './open-him/mediator-config-builder';
 import { OpenHimService } from './open-him/open-him.service';
 import { urlencoded, json } from 'express';
+import bodyParser from 'body-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const config = app.get<ConfigService>(ConfigService);
   //TODO: have the limit read from a env or OpenHIM configuration
-  app.use(json({ limit: '500mb' }));
+  app.use(bodyParser.text({ type: 'application/json', limit: '500mb' }));
   app.use(urlencoded({ extended: true, limit: '500mb' }));
 
   /*const adx = await NestFactory.createMicroservice(AdxModule, {
