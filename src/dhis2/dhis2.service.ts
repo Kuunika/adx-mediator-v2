@@ -14,7 +14,6 @@ export class Dhis2Service {
   async pushDataValueSets<T>(
     payload: CompletedDataSet | ReportedDataElementsPayload,
   ): Promise<T> {
-    
     const migrationSummary = await lastValueFrom(
       this.httpService.post<T>('/dataValueSets', payload, {
         headers: {

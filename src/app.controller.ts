@@ -9,20 +9,21 @@ export class AppController {
   @Post()
   async create(
     //TODO: create a validation pipe for the incoming data
-    @Body() createDataElementsDto: AdxMigrationPayloadDto,
+    @Body() dto: any,
     @Headers() headers,
   ) {
     //TODO: there will need to be validation on the client and transaction ids
     const clientId = headers['x-openhim-clientid'];
     const transactionId = headers['x-openhim-transactionid'];
+    let dataElementsDto: AdxMigrationPayloadDto = dto;
+    if (typeof dto === 'string') {
+      dataElementsDto = JSON.parse(dto);
+    }
+    const result = await this.eventDispatchService.create(dataElementsDto, {
+      clientId,
+      transactionId,
+    });
 
-    const result = await this.eventDispatchService.create(
-      createDataElementsDto,
-      {
-        clientId,
-        transactionId,
-      },
-    );
     return {
       message: 'Payload received successfully',
       transactionId,
