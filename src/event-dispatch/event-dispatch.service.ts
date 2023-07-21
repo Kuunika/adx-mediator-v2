@@ -26,6 +26,7 @@ export class EventDispatchService {
   ) {
     let migrationPayloadType: MigrationPayloadType;
 
+    // If the field "data-set" data set exists within the payload this determines how the DHIS2 payload will look.
     if (migrationPayload['data-set']) {
       migrationPayloadType = MigrationPayloadType.COMPLETED_DATA_SETS;
     } else {
@@ -35,12 +36,15 @@ export class EventDispatchService {
     await this.storeMigrationPayload(clientId, transactionId, migrationPayload);
 
     //TODO: need to add some type safety to this to avoid stupid errors
-    this.eventEmitter.emit('migration', {
-      migrationPayload: migrationPayload,
-      client: clientId,
-      transactionId: transactionId,
-      migrationPayloadType: migrationPayloadType,
-    });
+    //TODO: this is temp fix, need to implement the migrations for REPORTED_DATA_ELEMENTS enum
+    if (migrationPayloadType === MigrationPayloadType.COMPLETED_DATA_SETS) {
+      this.eventEmitter.emit('migration', {
+        migrationPayload: migrationPayload,
+        client: clientId,
+        transactionId: transactionId,
+        migrationPayloadType: migrationPayloadType,
+      });
+    }
 
     // TODO: Need to redo this when we get the chance
     /*
