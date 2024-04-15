@@ -8,13 +8,14 @@ import {
 import { AdxMigrationPayloadDto } from '../common/dtos';
 import { FacilityService } from '../registry/facility/facility.service';
 import { LoggingService } from '../logging/logging.service';
+import moment from "moment"
 
 @Injectable()
 export class TransformerService {
   constructor(
     private readonly facilityService: FacilityService,
     private readonly log: LoggingService,
-  ) {}
+  ) { }
 
   async toReportedDataElementsPayload(
     adxDataElements: AdxMigrationPayloadDto,
@@ -55,7 +56,8 @@ export class TransformerService {
             ...acc,
             {
               orgUnit: facilities.get(facility['facility-code']),
-              completeDate: adxDataElements['reporting-period'],
+              // completeDate: adxDataElements['reporting-period'],
+              completeDate: moment().format('YYYY-MM-DD'),
               period: adxDataElements['reporting-period'],
               dataSet: adxDataElements['data-set'],
               dataValues,
