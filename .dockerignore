@@ -13,3 +13,4 @@ Dockerfile
 .git
 .gitattributes
 .gitignore
+migrations
