@@ -4,7 +4,7 @@ import { EventDispatchService } from './event-dispatch/event-dispatch.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly eventDispatchService: EventDispatchService) {}
+  constructor(private readonly eventDispatchService: EventDispatchService) { }
 
   @Post()
   async create(
@@ -19,6 +19,8 @@ export class AppController {
     if (typeof dto === 'string') {
       dataElementsDto = JSON.parse(dto);
     }
+
+
     const result = await this.eventDispatchService.create(dataElementsDto, {
       clientId,
       transactionId,

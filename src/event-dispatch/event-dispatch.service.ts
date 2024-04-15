@@ -18,7 +18,7 @@ export class EventDispatchService {
     private readonly log: LoggingService,
     //TODO: Consideration - as the number of system linked to the ADX continues we might need to find a better way or registering the client proxies
     private eventEmitter: EventEmitter2,
-  ) {}
+  ) { }
 
   async create(
     migrationPayload: AdxMigrationPayloadDto,
@@ -32,6 +32,7 @@ export class EventDispatchService {
     } else {
       migrationPayloadType = MigrationPayloadType.REPORTED_DATA_ELEMENTS;
     }
+
 
     await this.storeMigrationPayload(clientId, transactionId, migrationPayload);
 
