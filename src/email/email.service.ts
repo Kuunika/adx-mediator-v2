@@ -55,9 +55,9 @@ export class EmailService {
     return `
     Data Migration for ${migrationPayload?.description} for Period: ${migrationPayload['reporting-period']
       }
-    Total Imported Records: ${migrationSummary.importCount.imported +
-      migrationSummary.importCount.updated
-      }
+      Newly created: ${migrationSummary.importCount.imported}
+       
+      Updated records: ${migrationSummary.importCount.updated}
 
     ${this.createConflictsMessage(
         migrationSummary.importCount.ignored,
@@ -86,7 +86,7 @@ export class EmailService {
     ${lineBreaks}
     Conflicts During Migration
     ${lineBreaks}
-    Records Ignored: ${numberIgnored}
+    Unchanged entries: ${numberIgnored}
     ${lineBreaks}
     ${orgUnits.size !== 0
           ? `Conflicting OrgUnits\n${lineBreaks}\n
