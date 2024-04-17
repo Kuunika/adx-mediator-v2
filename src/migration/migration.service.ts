@@ -39,7 +39,7 @@ export class MigrationService {
             dataElement,
           );
         const conflicts = dhis2Response.response?.conflicts;
-        const importCount = dhis2Response.response.importCount;
+        const importCount = dhis2Response.response?.importCount;
 
         console.log({ importCount })
         if (conflicts?.length) {

@@ -52,12 +52,14 @@ export class TransformerService {
               };
             },
           );
+
+
           return [
             ...acc,
             {
               orgUnit: facilities.get(facility['facility-code']),
               // completeDate: adxDataElements['reporting-period'],
-              completeDate: moment().format('YYYY-MM-DD'),
+              completeDate: moment(`${adxDataElements['reporting-period'].toString()}01`, 'YYYYMMDD').format('YYYY-MM-DD'),
               period: adxDataElements['reporting-period'],
               dataSet: adxDataElements['data-set'],
               dataValues,

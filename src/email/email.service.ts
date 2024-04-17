@@ -24,7 +24,7 @@ export class EmailService {
   constructor(
     private readonly config: ConfigService,
     private readonly log: LoggingService,
-  ) {}
+  ) { }
 
   async send(
     migrationSummary: MigrationSummary,
@@ -53,18 +53,16 @@ export class EmailService {
     migrationSummary: MigrationSummary,
   ) {
     return `
-    Data Migration for ${migrationPayload?.description} for Period: ${
-      migrationPayload['reporting-period']
-    }
-    Total Imported Records: ${
-      migrationSummary.importCount.imported +
+    Data Migration for ${migrationPayload?.description} for Period: ${migrationPayload['reporting-period']
+      }
+    Total Imported Records: ${migrationSummary.importCount.imported +
       migrationSummary.importCount.updated
-    }
+      }
 
     ${this.createConflictsMessage(
-      migrationSummary.importCount.ignored,
-      migrationSummary.conflicts,
-    )}
+        migrationSummary.importCount.ignored,
+        migrationSummary.conflicts,
+      )}
 
     Regards,
     Malawi Ministry Of Health - Digital Health Division
@@ -90,32 +88,30 @@ export class EmailService {
     ${lineBreaks}
     Records Ignored: ${numberIgnored}
     ${lineBreaks}
-    ${
-      orgUnits.size !== 0
-        ? `Conflicting OrgUnits\n${lineBreaks}\n
+    ${orgUnits.size !== 0
+          ? `Conflicting OrgUnits\n${lineBreaks}\n
       ${Array.from(orgUnits)
-        .map((org) => `- ${org}`)
-        .join('\n')}\n${lineBreaks}`
-        : ''
-    }
+            .map((org) => `- ${org}`)
+            .join('\n')}\n${lineBreaks}`
+          : ''
+        }
 
-    ${
-      importConflicts.size !== 0
-        ? `Other Conflicts:
+    ${importConflicts.size !== 0
+          ? `Other Conflicts:
       ${lineBreaks}
         ${Array.from(importConflicts).reduce((acc, cur) => {
-          try {
-            const conflict: Conflict = JSON.parse(cur) as Conflict;
-            return `${acc}\n - ${conflict.object} ${conflict.value}`;
-          } catch (error) {
-            this.log.error(
-              'There was an issue during the JSON Parse for the conflicts',
-            );
-            return acc;
-          }
-        }, '')}`
-        : ''
-    }
+            try {
+              const conflict: Conflict = JSON.parse(cur) as Conflict;
+              return `${acc}\n - ${conflict.object} ${conflict.value}`;
+            } catch (error) {
+              this.log.error(
+                'There was an issue during the JSON Parse for the conflicts',
+              );
+              return acc;
+            }
+          }, '')}`
+          : ''
+        }
     `
         //this replaces is meant to remove the white space at the beginning of each line in the message
         .replace(/^\s+/gm, '')
