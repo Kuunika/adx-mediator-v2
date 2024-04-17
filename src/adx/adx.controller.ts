@@ -42,11 +42,12 @@ export class AdxController {
     //Rename the call to the transformation service
     private readonly transformation: TransformerService,
     private readonly migration: MigrationService,
-  ) {}
+  ) { }
 
   @OnEvent('migration')
   async runMigration(eventPayload: AdxMigrationEventPayload) {
     //Validate
+
 
     //Transform
     let dhis2Payload: CompletedDataSet[] | ReportedDataElementsPayload[];
@@ -77,6 +78,8 @@ export class AdxController {
     }
 
     //Migrate (Push)
+
+
     const migrationSummary = await this.migration.start(
       eventPayload.transactionId,
       eventPayload.client,

@@ -46,4 +46,4 @@ export interface ImportOptions {
   skipLastUpdated: boolean;
 }
 
-export interface IDSchemes {}
+export interface IDSchemes { }
